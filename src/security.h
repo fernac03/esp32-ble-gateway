@@ -1,7 +1,7 @@
 #ifndef ESP_GW_SECURITY_H
 #define ESP_GW_SECURITY_H
 
-#include <hwcrypto/aes.h>
+#include <esp32/aes.h>
 
 #define BLOCK_SIZE 16
 
