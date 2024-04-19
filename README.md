@@ -25,7 +25,7 @@ Este breve guia explica como instalar o gateway e configurar o [complemento TTLo
 5. 
 ### Preparando o ESP32
 
-Abra o repositório clonado no VSCode e o PlatformIO deverá instalar automaticamente todas as dependências necessárias (isso levará alguns minutos, dependendo do seu computador e da velocidade da Internet, seja paciente e deixe *resolver*). Você precisa modificar `sdkconfig.h` localizado em `.platformio/packages/framework-arduinoespressif32/tools/sdk/include/config` e alterar `CONFIG_ARDUINO_LOOP_STACK_SIZE` para `10240`. Isso ocorre porque a geração do certificado HTTPS ocupa mais espaço de pilha.
+Abra o repositório clonado no VSCode e o PlatformIO deverá instalar automaticamente todas as dependências necessárias (isso levará alguns minutos, dependendo do seu computador e da velocidade da Internet, seja paciente e deixe *resolver*). Você precisa modificar `sdkconfig.h` localizado em `.platformio/packages/framework-arduinoespressif32/tools/sdk/include` e alterar `CONFIG_ARDUINO_LOOP_STACK_SIZE` para `10240`. Isso ocorre porque a geração do certificado HTTPS ocupa mais espaço de pilha.
 
 > No momento o projeto está configurado para funcionar apenas em **placas ESP32-WROVER**. Se você tiver uma placa diferente, precisará editar o arquivo `platformio.ini` e criar sua própria configuração de ambiente. No momento em que este artigo foi escrito, o código ocupava cerca de 1,5 MB, então estou usando o esquema de partição `min_spiffs.csv` para poder fazer OTA no futuro.
 
